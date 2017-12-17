@@ -21,12 +21,13 @@ with open('mysql.json') as json_data:
     data=json.load(json_data)
     mysqlId=data['id']
     mysqlPassword=data['password']
+    mysqlServer=data['server']
 #    print mysqlId, mysqlPassword
 
 
 Base = declarative_base()
 
-to_conn_str = 'mysql://%s:%s@fitcyclecustomers.cy4b7ufzt54x.us-west-2.rds.amazonaws.com:3306/prospect'%(mysqlId,mysqlPassword)
+to_conn_str = 'mysql://%s:%s@%s:3306/prospect'%(mysqlId,mysqlPassword,mysqlServer)
 eng_to = create_engine(to_conn_str, echo=False)
 meta=MetaData(eng_to)
 

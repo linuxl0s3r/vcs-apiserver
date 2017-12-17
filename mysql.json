@@ -1,4 +1,6 @@
 	{
 		"id":"db_app_user",
-		"password":"VMware123!"
+		"password":"VMware123!",
+		"server":"fitcyclecustomers.cy4b7ufzt54x.us-west-2.rds.amazonaws.com"
+
 	}
