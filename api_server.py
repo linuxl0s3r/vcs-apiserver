@@ -17,7 +17,7 @@ from flask import Flask, render_template, jsonify, flash, request
 app = Flask(__name__)
 app.debug=True
 
-with open('../mysql.json') as json_data:
+with open('./mysql.json') as json_data:
     data=json.load(json_data)
     mysqlId=data['id']
     mysqlPassword=data['password']
@@ -72,5 +72,5 @@ def hello_world(name=None):
 
 if __name__ == '__main__':
 
-    app.run(host='172.31.9.213', port=5000)
+    app.run(host='0.0.0.0', port=5000)
 
