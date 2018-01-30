@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import logging
+import os
 #import sqlalchemy
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Float, Text, DateTime, create_engine, inspect
@@ -17,13 +18,18 @@ from flask import Flask, render_template, jsonify, flash, request
 app = Flask(__name__)
 app.debug=True
 
-with open('./mysql.json') as json_data:
-    data=json.load(json_data)
-    mysqlId=data['id']
-    mysqlPassword=data['password']
-    mysqlServer=data['server']
+#with open('./mysql.json') as json_data:
+#    data=json.load(json_data)
+#    mysqlId=data['id']
+#    mysqlPassword=data['password']
+#    mysqlServer=data['server']
 #    print mysqlId, mysqlPassword
 
+
+# set variables with env variables
+mysqlId=os.environ['MYSQL_ID']
+mysqlPassword=os.environ['MYSQL_PASSWORD']
+mysqlServer=os.environ['MYSQL_SERVER']
 
 Base = declarative_base()
 
