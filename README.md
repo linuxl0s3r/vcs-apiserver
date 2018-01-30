@@ -26,6 +26,7 @@ ducker run -e MYSQL_ID='db_app_user' -e MYSQL_PASSWORD='VMware123!' -e MYSQL_SER
 
 
 REPLACE your values for each of the parameters in the -e. Three are needed
+
 MYSQL_ID -> id of the user in mysql
 
 MYSQL_PASSWORD -> password for the user
