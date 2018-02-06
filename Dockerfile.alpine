@@ -2,9 +2,9 @@ FROM alpine:latest
 MAINTAINER Bill Shetti "billshetti@gmail.com"
 WORKDIR /app
 ADD . /app
-ENV MYSQL_ID = "db_app_user" \
-    MYSQL_PASSWORD = "vmware123!" \
-    MYSQL_SERVER = "fitcyclecustomers.cy4b7ufzt54x.us-west-2.rds.amazonaws.com"
+ENV MYSQL_ID="db_app_user" 
+ENV MYSQL_PASSWORD="BILL" 
+ENV MYSQL_SERVER="fitcyclecustomers.cy4b7ufzt54x.us-west-2.rds.amazonaws.com"
  
 RUN apk update && \
     apk add mysql mysql-client && \
