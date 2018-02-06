@@ -20,9 +20,12 @@ to run  ./api_server.py
 git clone directory
 
 If you want to run ALPINE LINUX:
+
 cp Dockerfile.Alpine Dockerfile
+
 docker build -t miniapi .
-ducker run -e MYSQL_ID='db_app_user' -e MYSQL_PASSWORD='VMware123!' -e MYSQL_SERVER='fitcyclecustomers.cy4b7ufzt54x.us-west-2.rds.amazonaws.com' -p 5000:5000 miniapi
+
+docker run -e MYSQL_ID='db_app_user' -e MYSQL_PASSWORD='VMware123!' -e MYSQL_SERVER='fitcyclecustomers.cy4b7ufzt54x.us-west-2.rds.amazonaws.com' -p 5000:5000 miniapi
 
 
 REPLACE your values for each of the parameters in the -e. Three are needed
