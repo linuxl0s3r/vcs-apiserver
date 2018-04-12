@@ -67,7 +67,7 @@ def getPollsProspect():
 
 @app.route('/api/v1.0/signups', methods=['GET'])
 def get_tasks():
-    app.logger.info('getting all records'')
+    app.logger.info('getting all records')
     PPTable = getPollsProspect()
     return jsonify({'polls_prospect': PPTable})
 
