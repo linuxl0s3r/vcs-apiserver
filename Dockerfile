@@ -3,7 +3,7 @@ MAINTAINER Bill Shetti "billshetti@gmail.com"
 WORKDIR /app
 ADD . /app
 ENV MYSQL_ID="db_app_user" 
-ENV MYSQL_PASSWORD="BILL" 
+ENV MYSQL_PASSWORD="VMware123!" 
 ENV MYSQL_SERVER="fitcyclecustomers.cy4b7ufzt54x.us-west-2.rds.amazonaws.com"
  
 RUN apk update && \
