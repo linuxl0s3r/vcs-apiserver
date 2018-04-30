@@ -7,8 +7,14 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Float, Text, DateTime, create_engine, inspect
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import *
+from statsd import StatsClient
 
 import json
+
+statsd = StatsClient(host='localhost',
+                     port=8125,
+                     prefix='fitcycle-api-server',
+                     maxudpsize=512)
 
 # REST Client
 import requests
@@ -40,6 +46,7 @@ meta=MetaData(eng_to)
 
 polls_prospect = Table('polls_prospect', meta, autoload=True, autoload_with=eng_to)
 
+@statsd.timer('prospectPullTime')
 def getPollsProspect():
 
     PPTable = []
@@ -48,6 +55,8 @@ def getPollsProspect():
     q = select([polls_prospect.c.id, polls_prospect.c.firstname, polls_prospect.c.lastname, polls_prospect.c.email]) 
 
     results = q.execute()
+    
+    statsd.incr('ProspectPull', rate=1)
 
     for row in results:
 
