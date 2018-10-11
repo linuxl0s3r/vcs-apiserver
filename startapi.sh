@@ -1,5 +1,5 @@
 #!/bin/bash
 
 source mysql.env
-nohup python api_server.py &
+nohup python apiserver.py &
 

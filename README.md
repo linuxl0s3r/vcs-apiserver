@@ -21,13 +21,14 @@ git clone https://github.com/theseanodell/vcs-apiserver.git ~/apiserver
 
 # Run Apiserver
 
+cd apiserver/
+
 modify/update ID, Password and Server in mysql.env
 
-MYSQL_ID='db_user'
+    MYSQL_ID='db_user'
 
-MYSQL_PASSWORD='abc123'
+    MYSQL_PASSWORD='abc123'
 
-MYSQL_SERVER='10.10.10.10'
+    MYSQL_SERVER='10.10.10.10'
 
-
-to run  ./apiserver.py
+to run ./startapi.sh
