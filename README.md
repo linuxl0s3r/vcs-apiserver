@@ -1,6 +1,6 @@
 ### Credits
 
-This report was forked from https://github.com/bshetti/fitcycle.git. Bill Shetti is the original creator of Fitcycle. Modification have been made to the codebase and installation with input from Jacob Cherkas and myself.
+This repo was forked from https://github.com/bshetti/api_server. Bill Shetti is the original creator of Api_Server. Modification have been made to the codebase and installation with input from Jacob Cherkas and myself.
 
 ## Contributors
 Bill Shetti
