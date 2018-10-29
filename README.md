@@ -13,11 +13,11 @@ sudo apt-get update & sudo apt-get upgrade -y
 
 sudo apt-get install python python-pip libmysqlclient-dev -y
 
-pip install sqlalchemy flask statsd requests mysqlclient
+pip install sqlalchemy flask statsd requests mysqlclient MySQL-python
 
 # Install fitcycle
 
-git clone https://github.com/theseanodell/vcs-apiserver.git ~/apiserver
+git clone https://github.com/theseanodell/vcs-apiserver.git apiserver/
 
 # Run Apiserver
 
