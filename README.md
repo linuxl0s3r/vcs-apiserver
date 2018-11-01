@@ -17,8 +17,8 @@ Sean O'Dell
         pip install sqlalchemy flask statsd requests mysqlclient MySQL-python
 
     ## Run command
-    
-        sudo apt-get update & sudo apt-get upgrade -y
+
+        sudo apt-get update && sudo apt-get upgrade -y
 
 # Install fitcycle
 
