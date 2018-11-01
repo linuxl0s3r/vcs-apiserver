@@ -8,8 +8,17 @@ Jacob Cherkas
 Sean O'Dell
 
 # OS Requirements (Tested on Ubuntu 18.04)
+1. Setup Requirements
+    ## Run command
+        sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install python python-pip libmysqlclient-dev -y
 
-        sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install python python-pip libmysqlclient-dev -y && pip install sqlalchemy flask statsd requests mysqlclient MySQL-python && sudo apt-get update & sudo apt-get upgrade -y
+    ## Run command
+
+        pip install sqlalchemy flask statsd requests mysqlclient MySQL-python
+
+    ## Run command
+    
+        sudo apt-get update & sudo apt-get upgrade -y
 
 # Install fitcycle
 
