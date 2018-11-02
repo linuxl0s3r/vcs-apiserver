@@ -9,6 +9,7 @@ Sean O'Dell
 
 # OS Requirements (Tested on Ubuntu 18.04)
 1. Setup Requirements
+
     ## Run command
         sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install python python-pip libmysqlclient-dev -y
 
@@ -30,10 +31,10 @@ Sean O'Dell
 
         modify/update ID, Password and Server in mysql.env
 
-            MYSQL_ID='db_user'
+            MYSQL_ID='db_app_user'
 
-            MYSQL_PASSWORD='abc123'
+            MYSQL_PASSWORD='VMware1!'
 
-            MYSQL_SERVER='10.10.10.10'
+            MYSQL_SERVER='dblb'
 
-to run sudo ./startapi.sh
+to run ``sudo ./startapi.sh``
